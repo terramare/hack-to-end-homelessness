@@ -19,8 +19,9 @@
   <meta property="og:image" content="http://www.hacktoendhomelessness.com/img/logo.png" />
   <meta property="fb:app_id" content="649955735084385" />
 
-  <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic|Open+Sans:300,400,500,800' rel='stylesheet' type='text/css'>
   <link href="{{ site.baseurl }}/style.css" rel="stylesheet" />
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body class="{{ page.slug }}">
 
@@ -30,16 +31,45 @@
       <img src="{{ site.baseurl }}/img/logo.png" style="width:200px; height:auto;"><br>
       <a href="/">Hack to End Homelessness</a>
     </h1>
-    <div class="site-description">Seattle, WA ~ May 1-4, 2014</div>
-    <ul id="main-nav">
-      <li><a href="{{ site.baseurl }}/">Home</a></li>
-      <li><a href="{{ site.baseurl }}/news/">News</a></li>
-      <li><a href="{{ site.baseurl }}/participate/">Participant FAQ</a></li>
-      <li><a href="{{ site.baseurl }}/projects/">Completed Projects</a></li>
-      <li><a href="{{ site.baseurl }}/team/">Team</a></li>
-    </ul>
+<!--     <div class="site-description">Seattle, WA ~ May 1-4, 2014</div> -->
+    <div id="navdiv">
+      <ul id="main-nav">
+        <li><a href="{{site.baseurl}}/">Home</a></li>
+            <li>About
+      <ul>
+        <li><a href="{{site.baseurl}}/team/">Team</a></li>
+        <li><a href="{{site.baseurl}}/why/">Why</a></li>
+      </ul>
+    </li>
+    <li><a href="{{site.baseurl}}/news/">News</a></li>
+    <li>May 2014 Hackathon
+      <ul>
+        <li><a href="{{site.baseurl}}/report/">Event&nbsp;Report</a></li>
+        <li><a href="{{site.baseurl}}/projects/">Completed&nbsp;Projects</a></li>
+        <li><a href="{{site.baseurl}}/media/">Media</a></li>
+        <li><a href="{{site.baseurl}}/supporters/">Supporters</a></li>
+      </ul>
+    </li>
+  </ul>
+    </div>
     <hr>
   </div>
+  <script>
+  $(document).ready(function() {
+    $('#main-nav > li').click( function() {
+      var submenu = $(this).find("ul");
+      if (submenu.is(":hidden")) {
+        submenu.show();
+        } else { submenu.hide(); };
+    });
+    /*
+$('#main-nav > li').mouseout( function() {
+      var submenu = $(this).find("ul");
+      submenu.hide();
+    });
+*/
+  });
+  </script>
 </header>
 
 <main role="main">

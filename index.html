@@ -9,9 +9,7 @@ layout: default
   <p class="intro-message">Data on the causes of homelessness and what can solve it? We didn't just mine and visualize them, we helped service providers improve future data collection.</p>
 
   <p class="intro-message">This weekend, we built something that matters: </strong>a community empowered by technology & design thinking to solve the problem of homelessness together. Thank you for joining us, and please check back here this week for more project updates.</p>
-
 </div>
-
 <hr>
 
 <!-- Begin MailChimp Signup Form -->
@@ -33,61 +31,6 @@ layout: default
   <!--End mc_embed_signup-->
 <hr>
 
-<h2>Recent posts:</h2>
-<div class="posts">
-  {% for post in site.posts limit:3 %}
-    {% if post.published %}
-      <div class="post">
-        <p class="post-date">{{ post.date | date: "%d %B %Y" }} ~ {{ post.author }}</p>
-        <a href="{{ post.url }}" class="{{ post.slug }}">
-          <h3 class="post-title">{{ post.title }}</h3>
-        </a>
-        <div class="post-content">{{ post.excerpt | truncate: 400 }}</div>
-      </div>
-    {% endif %}
-  {% endfor %}
-<p><b><a href="{{site.baseurl}}/news">More posts</a></b></p>
-</div>
-<hr>
-
-<h2>Sponsors:</h2>
-<div class="sponsors">
-  <li><img src="{{site.baseurl}}/img/globys.jpg"></li>
-  <img src="{{site.baseurl}}/img/ugm.jpg">
-  <img src="{{site.baseurl}}/img/bittitan.png">
-  <img src="{{site.baseurl}}/img/F5.jpg">
-
-</div>
-<hr>
-
-<h2>Supporters:</h2>
-<p style="text-align:center;">Thank you to the supporters of Hack to End Homelessness!</p>
-
-
-<ul id="supporter-list">
-  <li>Dave Nichols</li>
-  <li>Greg Bellinger & guest</li>
-  <li>Steph & Keerat Sharma</li>
-  <li>Val Sanford, Hopela</li>
-  <li>Chris Pirillo, VloggerFair</li>
-  <li>Cynthia Adkins</li>
-  <li>Gretchen Burger</li>
-  <li>Zakaria Zajac</li>
-  <li>Chad Johansen</li>
-  <li>Bhushan Mehendale</li>
-  <li>Hilary Lovelace</li>
-  <li>Joneil Custodio</li>
-</ul>
-<p style="text-align:center;"><a href="https://www.eventbrite.com/e/hack-to-end-homelessness-seattle-tickets-11125365267?ref=ebtnebtckt" target="_blank">Purchase the supporter package</a> to be listed here.</p>
-<hr>
-
-<h2>Partners:</h2>
-<img src="{{site.baseurl}}/img/partners.png">
-<hr>
-
-
-
-
 <h2><a class="twitter-timeline" href="https://twitter.com/hack2end">@hack2end</a> on twitter</h2>
 
 <div style="text-align:center;">
@@ -95,7 +38,3 @@ layout: default
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
 <hr>
-
-
-
-

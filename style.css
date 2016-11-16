@@ -115,28 +115,66 @@ img {
   height: auto;
 }
 
-ul#main-nav {
+#navdiv {
+  margin: 20px 0px 80px 0px;
+  width: 100%;
+  position: relative;
+}
+
+#navdiv ul {
+  padding-top: 20px;
+  list-style: none;
   margin: 0px;
   padding: 0px;
+  position: relative;
   text-align: center;
-  margin: 20px 0px 40px 0px;
-  padding-top: 20px;
 }
 
-ul#main-nav li {
-  display: inline-block;
-  margin: 3px;
+#main-nav li {
   line-height: 2em;
-}
-
-ul#main-nav li a {
-  padding: 5px 8px;
+  font-weight: 500;
+  color: #3c80c3;
   background-color: #f8f8f8;
-  border-radius: 2px;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 100px;
 }
 
-ul#main-nav li a:hover {
+#main-nav > li {
+  display: inline-block;
+  margin: 0px 3px;
+  padding: 0px 8px;
+  position: relative;
+  vertical-align: top;
+}
+
+#main-nav :hover {
   background-color: #e8e8e8;
+}
+
+#main-nav li ul {
+  display: none;
+  text-align: center;
+  z-index: 10;
+}
+
+#main-nav li ul li {
+  font-weight: 300;
+  font-size: 14px;
+  height: 2em;
+  text-align: center;
+}
+
+#main-nav li:hover ul {
+  display: block;
+  text-align: center;
+/*   vertical-align: middle; */
+  position: absolute;
+}
+
+#main-nav li:hover li {
+  margin: 0px -8px;
+  padding: 0px 18px;
 }
 
 main .container,
@@ -222,10 +260,6 @@ ul.events li {
   display: inline-block;
   margin-right: 30px;
 }
-
-
-
-
 
 /*
 * form
@@ -337,12 +371,12 @@ input[type=text].right {
 
 .post-date {
   font-size: 12px;
-  font-family: Lora, Georgia, sans-serif;
+  font-family: 'Lora', Georgia, sans-serif;
   margin-bottom: 0px;
 }
 
 .posts {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .posts h3 {
